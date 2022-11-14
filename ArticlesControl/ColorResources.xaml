@@ -1,0 +1,70 @@
+<!--<ResourceDictionary 
+    xmlns ="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:system="clr-namespace:System;assembly=mscorlib">
+	--><!-- DataGridColors --><!--
+    <SolidColorBrush x:Key="datagrid_headers" Color="#62605E"/>
+	<SolidColorBrush x:Key="datagrid_combobox" Color="#000000"/>
+    <SolidColorBrush x:Key="datagrid_togglebuttoncolumnvisible" Color="#62605E"/>
+	<SolidColorBrush x:Key="datagrid_togglebuttoncolumnnotvisible" Color="#EEEEEE"/>
+	<SolidColorBrush x:Key="datagrid_sortingarrow" Color="Black"/>
+	<SolidColorBrush x:Key="datagrid_RowForeground" Color="Black"/>
+    <SolidColorBrush x:Key="datagrid_gridbackground" Color="#BEBCBA"/>
+    <SolidColorBrush x:Key="datagrid_Alternatingrow" Color="#EDDAD1"/>
+	<SolidColorBrush x:Key="datagrid_IsMouseOverHeaderColor" Color="OrangeRed"/>
+    <SolidColorBrush x:Key="datagrid_ScrollBarColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="datagrid_CellIsSelectedBackgroundColor" Color="DeepSkyBlue"/>
+    <SolidColorBrush x:Key="datagrid_CellIsSelectedForegroundColor" Color="Black"/>
+    <SolidColorBrush x:Key="datagrid_IsMouseOverCellColor" Color="#FF9215"/>
+	<SolidColorBrush x:Key="datagrid_headersfilter" Color="YellowGreen"/>
+	<SolidColorBrush x:Key="datagrid_headersforeground" Color="White"/>
+    <SolidColorBrush x:Key="datagrid_gridbackground_start" Color="White"/>
+	--><!-- /DataGridColors --><!--
+    <SolidColorBrush x:Key="Buttons_Controls_Color1" Color="Transparent"/>
+    <SolidColorBrush x:Key="Buttons_Controls_Color1_start" Color="White"/>
+    <SolidColorBrush x:Key="Buttons_Controls_Color2" Color="#F88562"/>
+    <SolidColorBrush x:Key="App_Background" Color="#BEBCBA"/>
+    <SolidColorBrush x:Key="Filter_window_background" Color="#BEBCBA"/>
+    <SolidColorBrush x:Key="Submit_button" Color="GreenYellow"/>
+    <SolidColorBrush x:Key="Cancel_button" Color="Red"/>
+    <SolidColorBrush x:Key="Filter_input_background" Color="#ffffff"/>
+    <SolidColorBrush x:Key="App_MenuItemMouseOver" Color="#BABABA"/>
+	<SolidColorBrush x:Key="App_MenuItemBackground" Color="#AAAAAA"/>
+    --><!-- All StringResources Goes Here --><!--
+</ResourceDictionary>-->
+
+<ResourceDictionary 
+    xmlns ="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!-- DataGridColors -->
+    <SolidColorBrush x:Key="datagrid_headers" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_combobox" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_togglebuttoncolumnvisible" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_togglebuttoncolumnnotvisible" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_sortingarrow" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_RowForeground" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_gridbackground" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_Alternatingrow" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_IsMouseOverHeaderColor" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_ScrollBarColor" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_CellIsSelectedBackgroundColor" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_CellIsSelectedForegroundColor" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_IsMouseOverCellColor" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_headersfilter" Color="#ffffff"/>
+    <SolidColorBrush x:Key="datagrid_headersforeground" Color="#ffffff"/>
+    <!-- /DataGridColors -->
+
+    <SolidColorBrush x:Key="Buttons_Controls_Color1" Color="#ffffff"/>
+    <SolidColorBrush x:Key="Buttons_Controls_Color2" Color="#ffffff"/>
+    <SolidColorBrush x:Key="App_Background" Color="#ffffff"/>
+    <SolidColorBrush x:Key="Filter_window_background" Color="#ffffff"/>
+    <SolidColorBrush x:Key="Submit_button" Color="#ffffff"/>
+    <SolidColorBrush x:Key="Cancel_button" Color="#ffffff"/>
+    <SolidColorBrush x:Key="Filter_input_background" Color="#ffffff"/>
+    <SolidColorBrush x:Key="App_MenuItemMouseOver" Color="#ffffff"/>
+    <SolidColorBrush x:Key="App_MenuItemBackground" Color="#ffffff"/>
+    <SolidColorBrush x:Key="GroupBoxHeaderColor" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="DisabledTextBox" Color="Gainsboro"/>
+    <!-- All StringResources Goes Here -->
+</ResourceDictionary> 

@@ -1,0 +1,32 @@
+﻿<local:MainPanel x:Class="BTPCLTransport.Controls.TowerPositionInfoPanel"
+              xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="170" d:DesignWidth="150">
+    <Grid VerticalAlignment="Stretch">
+        <UniformGrid x:Name="changeTowerUniformGrid" VerticalAlignment="Top" Rows="1" Visibility="Hidden"> 
+        </UniformGrid>
+        <StackPanel VerticalAlignment="Center">
+            <DockPanel Margin="0,30,0,0">
+                <Label Content="{DynamicResource VerticalPositionLabel}" />
+                <hc:TextBox x:Name="verticalValueTextBox" Text="9999" HorizontalAlignment="Right" BorderBrush="BLack" IsEnabled="True" Focusable="False" IsReadOnly="True" />
+            </DockPanel>
+            <DockPanel Margin="0,5,0,0" >
+                <Label Content="{DynamicResource HorizontalPositionLabel}" />
+                <hc:TextBox x:Name="horizontalValueTextBox" Text="9999" HorizontalAlignment="Right" BorderBrush="BLack" IsEnabled="True" Focusable="False" IsReadOnly="True"/>
+            </DockPanel>
+            <DockPanel Margin="0,5,0,0">
+                <Label Content="{DynamicResource ClosestLocationLabel}"/>
+                <hc:TextBox x:Name="closestPositionValueTextBox" Text="9999"  HorizontalAlignment="Right" BorderBrush="BLack" IsEnabled="True" Focusable="False" IsReadOnly="True"/>
+            </DockPanel>
+            <DockPanel Margin="0,5,0,0">
+                <Label Content="{DynamicResource DistanceLabel}"/>
+                <hc:TextBox x:Name="distanceValueTextBox" Text="9999" HorizontalAlignment="Right" BorderBrush="BLack" IsEnabled="True" Focusable="False" IsReadOnly="True"/>
+            </DockPanel>
+        </StackPanel>      
+    </Grid>
+</local:MainPanel>

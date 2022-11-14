@@ -1,0 +1,13 @@
+﻿<Window x:Class="DataGridControl.AddEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGridControl"
+        mc:Ignorable="d"
+        Title="AddEdit" Height="685" Width="260" Topmost="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid x:Name="Grid1" Background="{StaticResource App_Background}">
+        <Button Click="Button_Click1"  IsDefault="True" Background="{StaticResource Submit_button}" Content="{DynamicResource Submit}" Height="40" Width="90" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,120,20"/>
+        <Button Click="Button_Click" IsCancel="True" Background="{StaticResource Cancel_button}" Content="{DynamicResource Cancel}" Width="90" Height="40"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,-120,20"/>
+    </Grid>
+</Window>

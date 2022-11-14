@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\analytics.png" />
+    <None Remove="Resources\event-log.png" />
+    <None Remove="Resources\gear.png" />
+    <None Remove="Resources\Storage_documents.png" />
+    <None Remove="Resources\Trays.png" />
+    <None Remove="Resources\users_2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.3.0" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ArticlesControl\ArticlesControl.csproj" />
+    <ProjectReference Include="..\BTPControlLibrary\BTPControlLibrary.csproj" />
+    <ProjectReference Include="..\DataGridControl\DataGridControl.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\analytics.png" />
+    <Resource Include="Resources\event-log.png" />
+    <Resource Include="Resources\gear.png" />
+    <Resource Include="Resources\Storage_documents.png" />
+    <Resource Include="Resources\Trays.png" />
+    <Resource Include="Resources\users_2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Popups\Add_Operator.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

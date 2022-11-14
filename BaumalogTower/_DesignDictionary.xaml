@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="alarmsBackground" Color="Gold"/>
+    <SolidColorBrush x:Key="BottomMainBackground" Color="Gainsboro"/>
+    <SolidColorBrush x:Key="LeftMainBackground" Color="Gainsboro"/>
+    <SolidColorBrush x:Key="LoginBackground" Color="Gainsboro"/>
+    <SolidColorBrush x:Key="App_Background" Color="Gainsboro"/>
+    <SolidColorBrush x:Key="TextBoxBackground" Color="White"/>
+    <SolidColorBrush x:Key="AdministratorBackground" Color="White"/>
+    <SolidColorBrush x:Key="BorderBrushTextBox" Color="Black"/>
+    <SolidColorBrush x:Key="leftMenuButtonBackgroundDefault" Color="Gainsboro"/>
+    <SolidColorBrush x:Key="leftMenuButtonBackgroundSelected" Color="LimeGreen"/>
+    <SolidColorBrush x:Key="BorderBrushPanelService" Color="Black"/>
+    <SolidColorBrush x:Key="BackgroundPanelService" Color="Transparent"/>
+</ResourceDictionary>

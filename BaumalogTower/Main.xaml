@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BaumalogTower"
+        xmlns:BTPCLMenu="clr-namespace:BTPCLMenu;assembly=BTPCLMenu" xmlns:ArticlesControl="clr-namespace:ArticlesControl;assembly=ArticlesControl" xmlns:BTPCLAdministrator="clr-namespace:BTPCLAdministrator;assembly=BTPCLAdministrator" xmlns:BTPCLMain="clr-namespace:BTPCLMain;assembly=BTPCLMain" xmlns:Visualization="clr-namespace:BTPCLTransport.Visualization;assembly=BTPCLTransport" xmlns:BTPCLService="clr-namespace:BTPCLService;assembly=BTPCLService" x:Class="BaumalogTower.Main"
+        mc:Ignorable="d"
+        Title="BaumalogTowerPanel" Height="768" Width="1024" WindowStyle="None" ResizeMode="NoResize"  Loaded="MainWindow_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Visualization:StandardTransport        x:Name="transport1"         HorizontalAlignment="Left"      VerticalAlignment="Top"     Width="1024"    Height="693"   Visibility="Hidden"/>
+        <ArticlesControl:Articles               x:Name="articles1"          HorizontalAlignment="Left"      VerticalAlignment="Top"     Width="1024"    Height="693"   Visibility="Hidden"/>
+        <BTPCLAdministrator:Administrator       x:Name="administrator1"     HorizontalAlignment="Left"      VerticalAlignment="Top"     Width="1024"    Height="693"   Visibility="Hidden"/>
+        <BTPCLService:Service                   x:Name="service1"           HorizontalAlignment="Left"      VerticalAlignment="Top"     Width="1024"    Height="693"   Visibility="Hidden"/>
+        <BTPCLMain:Close                        x:Name="close1"             HorizontalAlignment="Right"     VerticalAlignment="Top"     Width="1024"    Height="693"   Visibility="Hidden"/>
+        <BTPCLMain:Login                        x:Name="login1"             HorizontalAlignment="Right"     VerticalAlignment="Top"     Width="1024"    Height="693"   Visibility="Visible"/>
+        <BTPCLMenu:BottomMain                   x:Name="bottomMain1"        HorizontalAlignment="Left"      VerticalAlignment="Bottom"  Width="1024"    Height="75"/>
+        <BTPCLMenu:LeftMain                     x:Name="leftMain1"          HorizontalAlignment="Left"      VerticalAlignment="Top"     Width="150"     Height="693"/>
+    </Grid>
+</Window>

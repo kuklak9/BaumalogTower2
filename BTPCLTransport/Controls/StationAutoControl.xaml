@@ -1,0 +1,16 @@
+﻿<local:MainPanel x:Class="BTPCLTransport.Controls.StationAutoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="150">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Label Content="{DynamicResource stationAutoLabelContet}" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <Button x:Name="autoStationInButton" Content="{DynamicResource autoStationInButtonContent}" Height="50" Margin="0,0,0,10"/>
+            <Button x:Name="autoStationOutButton" Content="{DynamicResource autoStationOutButtonContent}" Height="50" />
+        </StackPanel>       
+    </Grid>
+</local:MainPanel>

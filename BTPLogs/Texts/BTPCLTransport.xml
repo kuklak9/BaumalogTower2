@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Translation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>l_pos1</Path>
+    <Nr>0</Nr>
+    <pl>Pozycja pion</pl>
+    <en>Position Z</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>l_pos2</Path>
+    <Nr>0</Nr>
+    <pl>Pozycja poziom</pl>
+    <en>Position X</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>l_pos3</Path>
+    <Nr>0</Nr>
+    <pl>Pozycja stołu</pl>
+    <en>Position T</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>l_pos4</Path>
+    <Nr>0</Nr>
+    <pl>Prowadnica</pl>
+    <en>Location</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>l_pos5</Path>
+    <Nr>0</Nr>
+    <pl>Odległość</pl>
+    <en>Distance</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_transport</Path>
+    <Nr>0</Nr>
+    <pl>Przywieź</pl>
+    <en>Transport</en>
+  </TranslatedText>
+  
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>label8</Path>
+    <Nr>0</Nr>
+    <pl>Waga</pl>
+    <en>Weight</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_weightzero</Path>
+    <Nr>0</Nr>
+    <pl>TARA</pl>
+    <en>TARE</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>label1</Path>
+    <Nr>0</Nr>
+    <pl>Transport</pl>
+    <en>Transport</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>label6</Path>
+    <Nr>0</Nr>
+    <pl>Cel</pl>
+    <en>Target</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>label7</Path>
+    <Nr>0</Nr>
+    <pl>W transporcie</pl>
+    <en>In transport</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>label5</Path>
+    <Nr>0</Nr>
+    <pl>Lokalizacja</pl>
+    <en>Location</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>p.panel1.lb_loc</Path>
+    <Nr>1</Nr>
+    <pl>Winda</pl>
+    <en>Extractor</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>p.panel1.lb_loc</Path>
+    <Nr>2</Nr>
+    <pl>CM Góra</pl>
+    <en>CM Top</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>p.panel1.lb_loc</Path>
+    <Nr>3</Nr>
+    <pl>CM Dół</pl>
+    <en>CM Bottom</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_showArtOn1</Path>
+    <Nr>0</Nr>
+    <pl>Winda</pl>
+    <en>Extractor</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_showArtOn2</Path>
+    <Nr>0</Nr>
+    <pl>CM Góra</pl>
+    <en>CM Top</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_showArtOn3</Path>
+    <Nr>0</Nr>
+    <pl>CM Dół</pl>
+    <en>CM Bottom</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>lb_cmmode</Path>
+    <Nr>0</Nr>
+    <pl>Tryb pracy</pl>
+    <en>Mode</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_transportCM</Path>
+    <Nr>0</Nr>
+    <pl>Góra</pl>
+    <en>Top</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>bt_transportCM2</Path>
+    <Nr>0</Nr>
+    <pl>Dół</pl>
+    <en>Bottom</en>
+  </TranslatedText>
+  <TranslatedText>
+    <Control>BTPCLTransport.Transport</Control>
+    <Path>lb_translate4</Path>
+    <Nr>0</Nr>
+    <pl>Pokaż artykuły na:</pl>
+    <en>Show items on:</en>
+  </TranslatedText>
+   
+</Translation>

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.3.0" />
+    <PackageReference Include="HandyControl.Lang.en" Version="3.3.0" />
+    <PackageReference Include="HandyControl.Lang.pl" Version="3.3.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ArticlesControl\ArticlesControl.csproj" />
+    <ProjectReference Include="..\BTPCLAdministrator\BTPCLAdministrator.csproj" />
+    <ProjectReference Include="..\BTPCLMain\BTPCLMain.csproj" />
+    <ProjectReference Include="..\BTPCLMenu\BTPCLMenu.csproj" />
+    <ProjectReference Include="..\BTPCLService\BTPCLService.csproj" />
+    <ProjectReference Include="..\BTPCLTransport\BTPCLTransport.csproj" />
+    <ProjectReference Include="..\BTPTwinCatADS\BTPTwinCatADS.csproj" />
+    <ProjectReference Include="..\BTPUtilities\BTPUtilities.csproj" />
+    <ProjectReference Include="..\DataGridControl\DataGridControl.csproj" />
+  </ItemGroup>
+
+</Project>

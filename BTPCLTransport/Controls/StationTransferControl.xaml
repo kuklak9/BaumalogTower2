@@ -1,0 +1,31 @@
+﻿<local:MainPanel
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             xmlns:BinaryIndicator="clr-namespace:BTPControlLibrary.BinaryIndicator;assembly=BTPControlLibrary" x:Class="BTPCLTransport.Controls.StationTransferControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="170" d:DesignWidth="150">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <Label Content="{DynamicResource stationTransferLabelContent}" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <DockPanel  VerticalAlignment="Center">
+                <Label Content="{DynamicResource stationTransferInTowerLabel}" VerticalAlignment="Center" />
+                <BinaryIndicator:Lamp x:Name="bi_1" Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <DockPanel  VerticalAlignment="Center" Margin="0,5,0,0">
+                <Label Content="{DynamicResource stationTransferMovingLabel}" VerticalAlignment="Center" />
+                <BinaryIndicator:Lamp x:Name="bi_2" Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <DockPanel  VerticalAlignment="Center" Margin="0,5,0,0">
+                <Label Content="{DynamicResource stationTransferSafetyLabel}" VerticalAlignment="Center" />
+                <BinaryIndicator:Lamp x:Name="bi_3" Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <DockPanel  VerticalAlignment="Center" Margin="0,5,0,0">
+                <Label Content="{DynamicResource stationTransferAlarmLabel}" VerticalAlignment="Center" />
+                <BinaryIndicator:Lamp x:Name="bi_4" Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</local:MainPanel>

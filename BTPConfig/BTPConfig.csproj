@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DBParameters\**" />
+    <EmbeddedResource Remove="DBParameters\**" />
+    <None Remove="DBParameters\**" />
+    <Page Remove="DBParameters\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Tower.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Tower.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BTPUtilities\BTPUtilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ConfTable.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ConfTable.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ConfTable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConfTable.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

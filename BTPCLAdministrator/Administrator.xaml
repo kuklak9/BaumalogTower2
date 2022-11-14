@@ -1,0 +1,71 @@
+﻿<local:MainPanel x:Class="BTPCLAdministrator.Administrator"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:DataGridControl="clr-namespace:DataGridControl;assembly=DataGridControl"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="693" d:DesignWidth="1024">
+    <Grid Background="{DynamicResource AdministratorBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!--<ColumnDefinition Width="20*"/>
+            --><!--<ColumnDefinition Width="*"/>-->
+        </Grid.ColumnDefinitions>
+        <hc:TabControl TabItemHeight="45" FontSize="15" IsAnimationEnabled="True"  ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True">
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_1" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/event-log.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Logs}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_2" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/Storage_documents.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource History}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_3" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/analytics.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Stats}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_4" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/users_2.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Users}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_5" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/Trays.png" Height="40" Width="40"  />
+                        <Image Source="Resources/gear.png" Height="20" Width="20" Margin="-40,0,0,5"  />
+                        <TextBlock Text="{DynamicResource Trays}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>          
+        </hc:TabControl>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2"  x:Name="Logs_Datagrid"     Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"      VirtualizingPanel.IsVirtualizing="False" Margin="0,50,0,0"/>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2"  x:Name="Trade_Datagrid"    Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"      VirtualizingPanel.IsVirtualizing="False"/>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2"  x:Name="Stats_Datagrid"    Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"      VirtualizingPanel.IsVirtualizing="False" Margin="0,50,0,0"/>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2"  x:Name="Operator_Datagrid" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"   VirtualizingPanel.IsVirtualizing="False"/>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2"  x:Name="Tray_Datagrid"     Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"       VirtualizingPanel.IsVirtualizing="False"/>
+
+    </Grid>
+</local:MainPanel>

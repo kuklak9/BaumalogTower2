@@ -1,0 +1,36 @@
+﻿<local:MainPanel x:Class="BTPCLMain.Close"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="693" d:DesignWidth="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="1" Grid.ColumnSpan="3" Width="650" Source="Resources/Logo.png" Margin="0,30,0,0" VerticalAlignment="Top"/>
+        <hc:PasswordBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Background="{StaticResource TextBoxBackground}" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" x:Name="closeAppPassword" hc:PasswordBoxAttach.IsMonitoring="True"  Width="500"   RenderTransformOrigin="0.5,0.5" Margin="15" />
+        <Button Grid.Row="2" Grid.Column="2" Margin="0,15,0,15" Content="{DynamicResource CloseApplication}" Click="ShotDownApp_Click"/>
+        <Button Grid.Row="3" Grid.Column="1" Margin="50" Click="ShutDown_Click">
+            <Image Source="Resources/shutdown.png"/> 
+        </Button>
+        <Button Grid.Row="3" Grid.Column="2" Margin="50" Click="Login_Click">
+            <Image Source="Resources/Enter.png"/>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="3" Margin="50" Click="TV_Click">
+            <Image Source="Resources/teamviewer.png"/>
+        </Button>
+    </Grid>
+</local:MainPanel>

@@ -1,0 +1,73 @@
+﻿<UserControl xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPCLService"
+             xmlns:Tabs="clr-namespace:BTPCLService.Tabs" x:Class="BTPCLService.Service"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <hc:TabControl TabItemHeight="45" FontSize="15">
+            <hc:TabItem x:Name="ti_1">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/vertical.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource VerticalControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <Tabs:VerticalControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </hc:TabItem>
+            <hc:TabItem x:Name="ti_2">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/horizontal.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource HorizontalControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem x:Name="ti_3">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/horizontal.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource StationControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem x:Name="ti_4">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/horizontal.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource StationTransferControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem x:Name="ti_5">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/horizontal.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource StateControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem x:Name="ti_7">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/horizontal.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource SignalsControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem x:Name="ti_8">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/horizontal.png" Height="40" Width="40"/>
+                        <TextBlock Text="{DynamicResource CorrectionsControlContent}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+
+        </hc:TabControl>
+
+    </Grid>
+</UserControl>

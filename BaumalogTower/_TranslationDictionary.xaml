@@ -1,0 +1,100 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--BTPCLMenu-->
+    <system:String x:Key="showHideLeftMenuButtonContent">></system:String>
+    <system:String x:Key="systemInfoButtonContent">System Info</system:String>
+    <system:String x:Key="blinkButtonContent">B-Link</system:String>
+    <system:String x:Key="stopButtonContent">STOP</system:String>
+    <system:String x:Key="reButtonContent">RE</system:String>
+    <system:String x:Key="ceButtonContent">CE</system:String>
+    <system:String x:Key="returnTrayButtonContent">Odwieź półkę</system:String>
+    <system:String x:Key="alarmsButtonContent">ALARMY</system:String>
+    <system:String x:Key="plcErrorButtonContent">NO CONNECTION WITH PLC</system:String>
+
+    <!--BTPCLLeftMenu-->
+    <system:String x:Key="bt0ButtonContent">Odwieź</system:String>
+    <system:String x:Key="bt1ButtonContent">Transport</system:String>
+    <system:String x:Key="bt2ButtonContent">SmartWMS</system:String>
+    <system:String x:Key="bt3ButtonContent">Administrator</system:String>
+    <system:String x:Key="bt4ButtonContent">Serwis</system:String>
+    <system:String x:Key="bt6ButtonContent">Wyloguj</system:String>
+    <system:String x:Key="bt7ButtonContent">Zamknij</system:String>
+    <system:String x:Key="trayPlace1LabelContent">WINDA</system:String>
+    <system:String x:Key="trayPlace2LabelContent">STACJA 1</system:String>
+    <system:String x:Key="trayPlace3LabelContent">STACJA 2</system:String>
+    <system:String x:Key="trayPlace4LabelContent">STACJA 3</system:String>
+
+    
+    <!--BTPCLAdministrator-->
+    <system:String x:Key="Logs">Logi</system:String>
+    <system:String x:Key="History">Historia</system:String>
+    <system:String x:Key="Stats">Statystyki</system:String>
+    <system:String x:Key="Users">Oparatorzy</system:String>
+    <system:String x:Key="Trays">Półki</system:String>
+
+
+    <!--Login-->
+    <system:String x:Key="LoginButtonContent">ZALOGUJ</system:String>
+
+    <!--Close-->
+    <system:String x:Key="CloseApplication">Zamknij aplikację</system:String>
+    
+    <!--Transport-Controls-WeightPanel-->
+    <system:String x:Key="weightLabelContent">Waga</system:String>
+    <system:String x:Key="weightTaraLabelContent">Waga tara</system:String>
+    <system:String x:Key="weightTaraButtonContent">TARA</system:String>
+
+    <!--Transport-Controls-SimpleBringTray-->
+    <system:String x:Key="bringTrayButtonContent">Przywieź</system:String>
+    <system:String x:Key="serviceModeTextBoxText">TRYB SERWISOWY</system:String>
+    <system:String x:Key="transportLabelContent">Transport</system:String>
+
+    <!--Transport-Controls-TowerPositionInfoPanel-->
+    <system:String x:Key="VerticalPositionLabel">Pozycja pion</system:String>
+    <system:String x:Key="HorizontalPositionLabel">Pozycja poziom</system:String>
+    <system:String x:Key="ClosestLocationLabel">Prowadnica</system:String>
+    <system:String x:Key="DistanceLabel">Odległość</system:String>
+
+    <!--Transport-Controls-StationAutoControl-->
+    <system:String x:Key="autoStationInButtonContent">Schowaj</system:String>
+    <system:String x:Key="autoStationOutButtonContent">Wyjedź</system:String>
+    <system:String x:Key="stationAutoLabelContet">Stacja automatyczna</system:String>
+
+    <!--Transport-Controls-StationTransferAutoControl-->
+    <system:String x:Key="stationTransferInTowerLabel">Pozycja w regale</system:String>
+    <system:String x:Key="stationTransferMovingLabel">W ruchu</system:String>
+    <system:String x:Key="stationTransferSafetyLabel">Bezpieczeństwo</system:String>
+    <system:String x:Key="stationTransferAlarmLabel">Alarm</system:String>
+    <system:String x:Key="stationTransferLabelContent">Stacja transferowa</system:String>
+
+
+    <!--Transport-Controls-SimpleTowerTarget-->
+    <system:String x:Key="targetLabelContent">Cel</system:String>
+    <system:String x:Key="inTransportLabelContent">W transporcie</system:String>
+
+    <!--Service-Tabs-VerticalControl-->
+    <system:String x:Key="VerticalControlContent">Pion</system:String>
+    <system:String x:Key="HorizontalControlContent">Poziom</system:String>
+    <system:String x:Key="StationControlContent">Stacja</system:String>
+    <system:String x:Key="StationTransferControlContent">Transfer</system:String>
+    <system:String x:Key="StateControlContent">Stan</system:String>
+    <system:String x:Key="SinglasControlContent">Sygnały</system:String>
+    <system:String x:Key="CorrectionsControlContent">Korekty</system:String>
+    
+    <system:String x:Key="mtpmmButtonContent">Ruch windy na pozycję [mm]</system:String>
+    <system:String x:Key="mtwButtonContent">Ruch windy na okno</system:String>
+    <system:String x:Key="mtpButtonContent">Ruch windy na prowadnice</system:String>
+    <system:String x:Key="vJogLabelContent">RUCH PIONOWY</system:String>
+    <system:String x:Key="vJogPButtonContent">GÓRA</system:String>
+    <system:String x:Key="vJogMButtonContent">DÓŁ</system:String>
+    <system:String x:Key="CurrentLabel">Prąd</system:String>
+    <system:String x:Key="chainSafePositionLabel">Łańcuch ruchu poziomego w pozycji bezpiecznej</system:String>
+    <system:String x:Key="columnComboBoxContent">Kolumna</system:String>
+    <system:String x:Key="speedComboBoxContent">Prędkość</system:String>
+
+    
+    
+
+</ResourceDictionary>

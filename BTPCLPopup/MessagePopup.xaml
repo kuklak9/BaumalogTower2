@@ -1,0 +1,27 @@
+﻿<Window x:Class="BTPCLPopup.MessagePopup"
+                 xmlns:hc="https://handyorg.github.io/handycontrol"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:local="clr-namespace:BTPCLPopup" x:Name="window"
+         mc:Ignorable="d" AllowsTransparency="True" Background="Transparent" WindowStyle="None"
+         Title="MessagePopup" Height="300" Width="500" WindowStartupLocation="CenterOwner">
+    <Border CornerRadius="25" BorderBrush="Black" BorderThickness="2" Padding="6" Background="GhostWhite">
+        <Grid>
+            <StackPanel>
+                <TextBlock x:Name="CaptionTextBlock" TextAlignment="Center" Margin="0,0,0,0" FontWeight="Bold" FontSize="30" Text="Caption" TextWrapping="Wrap"/>
+                <TextBlock x:Name="DescriptionTextBlock" TextAlignment="Center" FontWeight="Light" FontSize="25" Text="Description" Margin="0,20,0,0"/>
+            </StackPanel>
+            <UniformGrid Rows="1" VerticalAlignment="Bottom" Height="50" Margin="20">
+                <Button x:Name="YesButton" Click="Yes_Click">
+                    <Image Source="Resources/accept.png" Stretch="Uniform"/>
+                </Button>
+                <Button x:Name="OKButton" Click="OK_Click" Content="OK" FontSize="25" />
+                <Button x:Name="NoButton" Click="No_Click">
+                    <Image Source="Resources/cancel.png" Stretch="Uniform"/>
+                </Button>
+            </UniformGrid>
+        </Grid>
+    </Border>
+</Window>

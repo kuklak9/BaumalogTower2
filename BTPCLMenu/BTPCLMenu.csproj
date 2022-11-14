@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\admin.png" />
+    <None Remove="Resources\close.png" />
+    <None Remove="Resources\logout.png" />
+    <None Remove="Resources\medium-risk.png" />
+    <None Remove="Resources\return.png" />
+    <None Remove="Resources\services.png" />
+    <None Remove="Resources\smart.png" />
+    <None Remove="Resources\transport.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.3.0" />
+    <PackageReference Include="HandyControl.Lang.en" Version="3.3.0" />
+    <PackageReference Include="HandyControl.Lang.pl" Version="3.3.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BTPCLPopup\BTPCLPopup.csproj" />
+    <ProjectReference Include="..\BTPControlLibrary\BTPControlLibrary.csproj" />
+    <ProjectReference Include="..\BTPLogs\BTPLogs.csproj" />
+    <ProjectReference Include="..\BTPTranslation\BTPTranslation.csproj" />
+    <ProjectReference Include="..\BTPTwinCatADS\BTPTwinCatADS.csproj" />
+    <ProjectReference Include="..\BTPUtilities\BTPUtilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\admin.png" />
+    <Resource Include="Resources\close.png" />
+    <Resource Include="Resources\logout.png" />
+    <Resource Include="Resources\medium-risk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\return.png" />
+    <Resource Include="Resources\services.png" />
+    <Resource Include="Resources\smart.png" />
+    <Resource Include="Resources\transport.png" />
+  </ItemGroup>
+
+</Project>

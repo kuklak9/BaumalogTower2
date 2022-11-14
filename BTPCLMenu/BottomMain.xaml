@@ -1,0 +1,36 @@
+﻿<local:MainPanel x:Class="BTPCLMenu.BottomMain"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="75" d:DesignWidth="1024" >
+    <Grid Background="{DynamicResource BottomMainBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="showHideLeftMenuButton" Content="{DynamicResource showHideLeftMenuButtonContent}"   Grid.Column="0"     Margin="2" FontSize="25" Click="showHide_Click"/>
+        <Button x:Name="systemInfoButton"                                                                   Grid.Column="2"     Margin="2">
+            <TextBlock TextWrapping="Wrap" MaxWidth="60"  TextAlignment="Center" Text="{DynamicResource systemInfoButtonContent}" FontSize="15"/>
+        </Button>
+        <hc:TextBox x:Name="stateTextBox"       Text="ZATRZYMANY"                                                            Grid.Column="1"     Margin="2" FontSize="20"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  BorderBrush="Black"   FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" Focusable="True" IsEnabled="True" IsReadOnly="True"/>
+        <hc:TextBox x:Name="plcTextBox"         Text="{DynamicResource plcErrorButtonContent}"              Grid.Column="1"     Margin="2" FontSize="15"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  BorderBrush="Black"   FontWeight="Bold" TextAlignment="Center" TextWrapping="Wrap" Focusable="False" IsEnabled="True" IsReadOnly="True" Visibility="Hidden"/>
+        <Button x:Name="blinkButton"            Content="{DynamicResource blinkButtonContent}"              Grid.Column="3"     Margin="2" FontSize="15"/>
+        <Button x:Name="stopButton"             Content="{DynamicResource stopButtonContent}"               Grid.Column="4"     Margin="2" Background="Red"         BorderBrush="Red"               FontSize="30" Click="stop_Click"/>
+        <Button x:Name="reButton"               Content="{DynamicResource reButtonContent}"                 Grid.Column="5"     Margin="2" Background="LimeGreen"   BorderBrush="LimeGreen"         FontSize="30"/>
+        <Button x:Name="ceButton"               Content="{DynamicResource ceButtonContent}"                 Grid.Column="6"     Margin="2" Background="Yellow"      BorderBrush="Yellow"            FontSize="30"/>
+        <Button x:Name="alarmsButton"                                                                       Grid.Column="8"     Margin="2" Background="LightGoldenrodYellow"  BorderBrush="LightGoldenrodYellow"            FontSize="15">
+            <Image  Source="Resources/medium-risk.png" Width="58" Height="55"/>
+        </Button>
+    </Grid>
+</local:MainPanel>

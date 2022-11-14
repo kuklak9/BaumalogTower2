@@ -1,0 +1,1 @@
+<Settings><SmartWMS><Server>Data Source=192.168.0.200\testinstance;Initial Catalog=SmartWMS2;Persist Security Info=True;User ID=wms;Password=1</Server></SmartWMS></Settings>

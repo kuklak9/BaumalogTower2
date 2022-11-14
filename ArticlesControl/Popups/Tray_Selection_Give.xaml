@@ -1,0 +1,92 @@
+﻿<local:MainWindow x:Class="ArticlesControl.Tray_Selection_Give" xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary" mc:Ignorable="d"
+                   xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                  xmlns:DataGridControl="clr-namespace:DataGridControl;assembly=DataGridControl"
+        Title="Tray Selection Give" Height="690" Width="600" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" VirtualizingPanel.IsVirtualizing="True">
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+                <ResourceDictionary Source="/ArticlesControl;component/StringResources.pl-PL.xaml"/>
+                <ResourceDictionary Source="/ArticlesControl;component/ColorResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    <Grid Margin="0,58,0,20" x:Name="Grid">
+        <hc:TabControl x:Name="TabControl" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsAnimationEnabled="True" ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" ShowContextMenu="False" Margin="0,-57,0,45" TabItemHeight="45" FontSize="15">
+            <hc:TabItem HorizontalContentAlignment="Center" Header="{DynamicResource Tray_Selection_Give}" ShowContextMenu="False">
+                <Grid>
+                    <hc:SimplePanel Background="{DynamicResource App_Background}" Height="580" VerticalAlignment="Top" Margin="0,0,0,0" Width="600">
+                        <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{StaticResource datagrid_headers}" Background="{StaticResource App_Background}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Height="130" Margin="10,10,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontFamily="Verdana" FontSize="15" FontWeight="ExtraLight" Foreground="{DynamicResource GroupBoxHeaderColor}" Text="{DynamicResource Find_Tray_From_Window}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <Button x:Name="bt_trayfromwindow" Width="200" Click="Empty_Tray_From_Window_Click" Height="79" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,0" FontSize="30" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{StaticResource datagrid_headers}" Background="{StaticResource App_Background}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="285" Height="130" Margin="0,10,10,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontFamily="Verdana" FontSize="15" FontWeight="ExtraLight" Foreground="{DynamicResource GroupBoxHeaderColor}" Text="{DynamicResource Find_Empty_Tray}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <Button Width="200" Click="Find_Empty_Tray_Click" Height="79" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" >
+                                    <Button.Content>
+                                        <TextBlock FontSize="20" FontWeight="SemiBold"  TextWrapping="Wrap" Text="{DynamicResource Find_Empty_Tray}" TextAlignment="Center"/>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{StaticResource datagrid_headers}" Background="{StaticResource App_Background}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="580" Height="230" Margin="10,150,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontFamily="Verdana" FontSize="15" FontWeight="ExtraLight" Foreground="{DynamicResource GroupBoxHeaderColor}" Text="{DynamicResource Trays_Contains_Indeks}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <DataGridControl:UserControl1 x:Name="dg" Visibility="Visible" HorizontalAlignment="Left" VirtualizingPanel.IsVirtualizing="False" MaxHeight="220" MaxWidth="560" LostFocus="dg_LostFocus" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{StaticResource datagrid_headers}" Background="{StaticResource App_Background}" Visibility="Visible" x:Name="Localization_Groupbox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="580" Height="180" Margin="10,390,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontFamily="Verdana" FontSize="15" FontWeight="ExtraLight" Foreground="{DynamicResource GroupBoxHeaderColor}" Text="{DynamicResource ID_Localization}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel VerticalAlignment="Center" Margin="0,-10,0,0">
+                                <StackPanel>
+                                    <hc:ComboBox x:Name="ID_Tray"           FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="40" hc:InfoElement.Title="{DynamicResource ID_Tray}"           Height="70" BorderBrush="#7E8183" IsEnabled="True"  Width="200" HorizontalAlignment="Left" SelectionChanged="ID_Tray_SelectionChanged"/>
+                                    <hc:ComboBox x:Name="ID_Localization"   FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="40" hc:InfoElement.Title="{DynamicResource ID_Localization}"   Height="70" BorderBrush="#7E8183" IsEnabled="True"  Width="200" HorizontalAlignment="Left" SelectionChanged="ID_Localization_SelectionChanged"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="350" Height="130" Margin="230,430,0,0" x:Name="localization_grid" Visibility="Visible">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="53*"/>
+                                <RowDefinition Height="197*"/>
+                            </Grid.RowDefinitions>
+                            <Canvas x:Name="Localization_Visualizer" Background="{StaticResource App_Background}" Grid.RowSpan="2"/>
+                        </Grid>
+                    </hc:SimplePanel>
+                </Grid>
+            </hc:TabItem>
+        </hc:TabControl>
+        <hc:StepBar x:Name="Step" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,-10">
+            <hc:StepBarItem Content="{DynamicResource Tray_Selection_Give}" FontSize="13" FontWeight="ExtraLight"/>
+        </hc:StepBar>
+        <Button Width="120"  x:Name="Submit" Click="Submit_Click" Background="{StaticResource Submit_button}" Content="{DynamicResource Submit}" Height="55" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,-15" FontSize="15" FontWeight="SemiBold" IsEnabled="False"/>
+        <Button Width="120" IsCancel="True" Background="{StaticResource Cancel_button}" Content="{DynamicResource Cancel}" Height="55" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,5,-15" FontSize="15" FontWeight="SemiBold"/>
+    </Grid>
+</local:MainWindow>

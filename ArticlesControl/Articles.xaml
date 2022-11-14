@@ -1,0 +1,164 @@
+﻿<local:MainPanel xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:DataGridControl="clr-namespace:DataGridControl;assembly=DataGridControl"
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             x:Class="ArticlesControl.Articles"
+             mc:Ignorable="d" 
+             d:DesignHeight="693" d:DesignWidth="1024" x:Name="MAIN" Loaded="Articles_Loaded">
+    <!--<UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+                <ResourceDictionary Source="/ArticlesControl;component/ColorResources.xaml"/>
+                --><!--<ResourceDictionary Source="/ArticlesControl;component/StringResources.pl-PL.xaml"/>--><!--
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>-->
+    <Grid Background="{DynamicResource SecondaryRegionBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <hc:TabControl Grid.RowSpan="3" Grid.Column="0" x:Name="TabControl_base" IsAnimationEnabled="True" ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" Margin="0,0,0,0" TabItemHeight="45" FontSize="15">
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_1" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/Articles.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Articles}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_2" PreviewMouseDown="TopMenuButton_Click" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/ArticlesOnTrays.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource ArticlesOnTrays}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"  ShowContextMenu="False" x:Name="bt_3" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/Type.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Species}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"   ShowContextMenu="False" x:Name="bt_4" PreviewMouseDown="TopMenuButton_Click">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/Order.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Orders}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem HorizontalContentAlignment="Center"   ShowContextMenu="False" x:Name="bt_5" PreviewMouseDown="TopMenuButton_Click" >
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left">
+                        <Image Source="Resources/Trays.png" Height="40" Width="40"  />
+                        <TextBlock Text="{DynamicResource Trays}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </TabItem.Header>
+            </hc:TabItem>
+        </hc:TabControl>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Articles_Datagrid" Visibility="Hidden"  HorizontalAlignment="Left" VerticalAlignment="Top" VirtualizingPanel.IsVirtualizing="False"/>
+        <DataGridControl:UserControl1  Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Stock_Datagrid" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top"  VirtualizingPanel.IsVirtualizing="True"/>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Type_Datagrid" Visibility="Hidden"  HorizontalAlignment="Left" VerticalAlignment="Top"  VirtualizingPanel.IsVirtualizing="True"/>
+        <Grid Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" x:Name="Order_Grid" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DataGridControl:UserControl1 BorderBrush="{StaticResource datagrid_gridbackground}" x:Name="Order_Datagrid" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top"  VirtualizingPanel.IsVirtualizing="False"/>
+            <GridSplitter DragCompleted="GridSplitter_DragCompleted" x:Name="GridSplitter" Background="Gray" Grid.Row="1" MouseDoubleClick="Split_grid_button" Margin="0,0,0,0"/>
+            <TextBlock FontSize="22" FontWeight="Light" Margin="5,0,0,0" x:Name="Order_Line_Name" Background="Transparent" Grid.Row="1" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155"/>
+            <TextBlock HorizontalAlignment="Center" IsHitTestVisible="False" VerticalAlignment="Center" FontSize="26" Text="&#xE700;"
+                    Foreground="Black" FontFamily="Segoe MDL2 Assets" Height="23" Width="25" Grid.Row="1">
+            </TextBlock>
+            <DataGridControl:UserControl1 BorderBrush="Gray" Grid.Row="2" x:Name="OrderLine_Datagrid" Visibility="Visible" HorizontalAlignment="Left" VerticalAlignment="Top"  VirtualizingPanel.IsVirtualizing="False"/>
+        </Grid>
+        <DataGridControl:UserControl1 Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="Tray_Datagrid" Visibility="Hidden"  HorizontalAlignment="Left" VerticalAlignment="Top" VirtualizingPanel.IsVirtualizing="False"/>
+        <Button Background="{StaticResource App_Background}" Visibility="Hidden" Grid.Row="1" Width="50" Height="46" HorizontalAlignment="Left" Click="TreeHide_Click" VerticalAlignment="Top" Margin="5,2,0,0" x:Name="TreeHide" >
+            <TextBlock TextWrapping="Wrap" Text="KAT GAT HIDE" Margin="-4" MaxWidth="33" TextAlignment="Center" x:Name="Hide_Text"/>
+        </Button>
+        <Button Background="{StaticResource App_Background}" Visibility="Hidden"  Grid.Row="1" Width="50" Height="46" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,2,0,0" x:Name="TreeShow" Click="TreeShow_Click">
+            <TextBlock TextWrapping="Wrap" Text="KAT GAT SHOW" Margin="-4" MaxWidth="33" TextAlignment="Center" x:Name="Show_Text"/>
+        </Button>
+        <hc:TabControl Grid.Row="1" Grid.RowSpan="2" x:Name="TabControl" SelectionChanged="TabControl_SelectionChanged" Visibility="Hidden" Grid.Column="0" Margin="0,48,0,0" Width="192"  ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" ShowContextMenu="False" HorizontalAlignment="Left" Height="593" TabItemHeight="45" Background="{DynamicResource App_Background}">
+            <hc:TabItem x:Name="TabItem_Category" Margin="0,-1,0,4" VerticalAlignment="Stretch">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="147*"/>
+                        <ColumnDefinition Width="44*"/>
+                    </Grid.ColumnDefinitions>
+                    <hc:SimplePanel Background="{StaticResource App_MenuItemBackground}" Grid.ColumnSpan="2"/>
+                    <TreeView FontFamily="Verdana" FontSize="15" x:Name="Category_Tree" Background="{StaticResource App_MenuItemBackground}" Visibility="Visible" SelectedItemChanged="Category_Tree_SelectedItemChanged" Grid.ColumnSpan="2" Margin="0,-4,0,0">
+                        <TreeView.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                      Color="#62605E" />
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
+                      Color="Black" />
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}"
+                      Color="#62605E" />
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}"
+                      Color="Black" />
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightColor}" 
+                      Color="#62605E"/>
+                        </TreeView.Resources>
+                    </TreeView>
+                </Grid>
+                <hc:TabItem.Header>
+                    <TextBlock Text="{DynamicResource Category}" FontFamily="Verdana" FontSize="15"></TextBlock>
+                </hc:TabItem.Header>
+            </hc:TabItem>
+            <hc:TabItem Header="{DynamicResource Types}" FontFamily="Verdana" FontSize="15" x:Name="TabItem_Type" Margin="0,-1,0,4" VerticalAlignment="Stretch">
+                <TreeView FontFamily="Verdana" FontSize="15" x:Name="Type_Tree" Background="{StaticResource App_MenuItemBackground}" Visibility="Visible" SelectedItemChanged="Type_Tree_SelectedItemChanged" Margin="0,-4,-1,0">
+                </TreeView>
+            </hc:TabItem>
+        </hc:TabControl>
+        <hc:TabControl x:Name="TabControl2" Visibility="Hidden" Opacity="1" Grid.Column="0" Grid.Row="1" Margin="0,48,0,0" Width="192" Grid.RowSpan="18" ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" ShowContextMenu="False" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+            <hc:TabItem x:Name="TabItemOrderFilter" Header="{DynamicResource Order_Filter}" FontFamily="Verdana" FontSize="15" Margin="0,-1,0,4" Visibility="Visible" >
+                <TreeView FontFamily="Verdana" FontSize="15" x:Name="Order_Filter_tree" Background="{StaticResource App_MenuItemBackground}" Visibility="Visible" SelectedItemChanged="Order_Filder_SelectedItemChanged" Margin="0,-30,-1,0" >
+                    <TreeViewItem Header="{DynamicResource All}" Tag="0" MinHeight="40">
+                        <TreeViewItem Header="{DynamicResource Order_Type1}" Tag="1" MinHeight="40">
+                            <TreeViewItem Header="{DynamicResource Order_Status1}" Tag="-2" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status2}" Tag="-1" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status3}" Tag="1" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status4}" Tag="2" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status5}" Tag="10" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status6}" Tag="20" MinHeight="40"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="{DynamicResource Order_Type2}" Tag="2" MinHeight="40">
+                            <TreeViewItem Header="{DynamicResource Order_Status1}" Tag="-2" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status2}" Tag="-1" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status3}" Tag="1" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status4}" Tag="2" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status5}" Tag="10" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status6}" Tag="20" MinHeight="40"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="{DynamicResource Order_Type3}" Tag="3" MinHeight="40">
+                            <TreeViewItem Header="{DynamicResource Order_Status1}" Tag="-2" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status2}" Tag="-1" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status3}" Tag="1" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status4}" Tag="2" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status5}" Tag="10" MinHeight="40"/>
+                            <TreeViewItem Header="{DynamicResource Order_Status6}" Tag="20" MinHeight="40"/>
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeView>
+            </hc:TabItem>
+        </hc:TabControl>
+    </Grid>
+</local:MainPanel>

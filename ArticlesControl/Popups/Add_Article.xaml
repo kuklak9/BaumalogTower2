@@ -1,0 +1,162 @@
+﻿<local:MainWindow x:Class="ArticlesControl.Add_Article" xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+        mc:Ignorable="d"
+        Title="AddArticle" Height="670" Width="695" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" VirtualizingPanel.IsVirtualizing="True">
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+                <ResourceDictionary Source="/ArticlesControl;component/StringResources.pl-PL.xaml"/>
+                <ResourceDictionary Source="/ArticlesControl;component/ColorResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    <Grid Margin="0,58,0,20" x:Name="Grid">
+        <hc:TabControl x:Name="TabControl" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsAnimationEnabled="True" ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" ShowContextMenu="False" Margin="0,-57,0,45" TabItemHeight="45" FontSize="15" >
+            <hc:TabItem HorizontalContentAlignment="Center" Header="{DynamicResource Main_Info}" PreviewMouseLeftButtonDown="TabItem1_MouseLeftButtonDown" ShowContextMenu="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="62*"/>
+                        <ColumnDefinition Width="169*"/>
+                    </Grid.ColumnDefinitions>
+                    <hc:SimplePanel Background="{DynamicResource App_Background}" Height="580" VerticalAlignment="Top" Margin="0,0,-2,0" Width="695" Grid.ColumnSpan="2">
+                        <GroupBox mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" Width="330" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" Foreground="WhiteSmoke" Text="{DynamicResource Index}" />
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel Margin="0,0,0,0">
+                                <hc:TextBox FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Index_plh}" hc:InfoElement.Title="{DynamicResource Index}" Height="72" BorderBrush="#7E8183" IsEnabled="True" x:Name="Indeks" GotFocus="KB_GotFocus" />
+                                <hc:TextBox FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Name_plh}" hc:InfoElement.Title="{DynamicResource Name}" BorderBrush="#7E8183" Height="72" x:Name="Nazwa" GotFocus="KB_GotFocus" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Background="{DynamicResource App_Background}" HorizontalAlignment="Left" Width="330" Height="272" Margin="10,235,0,0" Padding="10" BorderThickness="1" BorderBrush="Black" mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Foreground="WhiteSmoke" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" Text="{DynamicResource Indexes}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel x:Name="Combobox_StackPanel" Margin="0,-12,0,0" VerticalAlignment="Center">
+                                <hc:ComboBox x:Name="ID_Kategorii" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Category_plh}" hc:InfoElement.Title="{DynamicResource ID_Category}" Height="72" BorderBrush="#7E8183"/>
+                                <hc:ComboBox x:Name="ID_Gatunku" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Type_plh}" hc:InfoElement.Title="{DynamicResource ID_Type}" Height="72" BorderBrush="#7E8183"/>
+                                <hc:ComboBox x:Name="ID_Jednostki" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Unit_plh}" hc:InfoElement.Title="{DynamicResource ID_Unit}" Height="72" BorderBrush="#7E8183"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="330" Height="532" Margin="0,10,10,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Foreground="WhiteSmoke" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" Text="{DynamicResource Dismensions}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel x:Name="Stack" Margin="0,-10,0,0">
+                                <hc:TextBox x:Name="Wymiar1" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size1_plh}" hc:InfoElement.Title="{DynamicResource Size1}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar2" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size2_plh}" hc:InfoElement.Title="{DynamicResource Size2}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar3" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size3_plh}" hc:InfoElement.Title="{DynamicResource Size3}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar4" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size4_plh}" hc:InfoElement.Title="{DynamicResource Size4}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar5" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size5_plh}" hc:InfoElement.Title="{DynamicResource Size5}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar6" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size6_plh}" hc:InfoElement.Title="{DynamicResource Size6}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar7" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size7_plh}" hc:InfoElement.Title="{DynamicResource Size7}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                                <hc:TextBox x:Name="Wymiar8" Margin="0,-5,0,0" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.Placeholder="{DynamicResource Size8_plh}" hc:InfoElement.Title="{DynamicResource Size8}" Height="65" BorderBrush="#7E8183" Visibility="Visible" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </hc:SimplePanel>
+                </Grid>
+            </hc:TabItem>
+            <hc:TabItem Header="{DynamicResource Additional_Info}" PreviewMouseLeftButtonDown="TabItem2_MouseLeftButtonDown" ShowContextMenu="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="536*"/>
+                        <ColumnDefinition Width="157*"/>
+                    </Grid.ColumnDefinitions>
+                    <hc:SimplePanel Background="{DynamicResource App_Background}" Grid.ColumnSpan="2"/>
+                    <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="320" Height="200" Margin="10,10,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                        <GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" Foreground="WhiteSmoke" Text="{DynamicResource Indexes}"/>
+                            </StackPanel>
+                        </GroupBox.Header>
+                        <StackPanel>
+                            <hc:ComboBox x:Name="ID_KlasySkladowania" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource ABCAnalyzis_plh}" hc:InfoElement.Title="{DynamicResource ID_ABCAnalysis}" Height="72" BorderBrush="#7E8183" />
+                            <hc:ComboBox x:Name="Rotation_class_combobox" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource RotationClass_plh}" hc:InfoElement.Title="{DynamicResource Rotation class}" Height="72" BorderBrush="#7E8183"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,220,0,0" Height="329" Width="320" Padding="10" BorderThickness="1" BorderBrush="Black">
+                        <GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Bold" Text="{DynamicResource Description}"></TextBlock>
+                            </StackPanel>
+                        </GroupBox.Header>
+                        <StackPanel>
+                            <hc:TextBox x:Name="Opis" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="245" hc:InfoElement.Placeholder="{DynamicResource Description_plh}" hc:InfoElement.Title="{DynamicResource Description}" Height="275" BorderBrush="#7E8183" AcceptsReturn="True" TextWrapping="Wrap" FontStretch="Expanded" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" GotFocus="KB_GotFocus"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="320" Height="539" Margin="360,10,0,0" Padding="10" BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="2">
+                        <GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" Foreground="WhiteSmoke" Text="{DynamicResource Features}"/>
+                            </StackPanel>
+                        </GroupBox.Header>
+                        <StackPanel Margin="0,-10,0,0" VerticalAlignment="Center">
+                            <hc:TextBox x:Name="Stan" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource State_plh}" hc:InfoElement.Title="{DynamicResource State}" Height="72" BorderBrush="#7E8183" GotFocus="KB_GotFocus"/>
+                            <hc:TextBox x:Name="Rezerwacja" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Reservation_plh}" hc:InfoElement.Title="{DynamicResource Reservation}" Height="72" BorderBrush="#7E8183" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                            <hc:TextBox x:Name="WagaJednostkowa" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Unit_Weight_plh}" hc:InfoElement.Title="{DynamicResource Unit_Weight}" Height="72" BorderBrush="#7E8183" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                            <hc:TextBox x:Name="StanMinimalny" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Minimal_stock_plh}" hc:InfoElement.Title="{DynamicResource Minimal_stock}" Height="72" BorderBrush="#7E8183" Tag="Only_Numbers" GotFocus="NKB_GotFocus" TextChanged="NKB_TextChanged"/>
+                            <hc:TextBox x:Name="Atr1" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Feature_plh}" hc:InfoElement.Title="{DynamicResource Feature1}" Height="72" BorderBrush="#7E8183" TextWrapping="Wrap" FontStretch="Expanded" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" AcceptsReturn="True" GotFocus="KB_GotFocus"/>
+                            <hc:TextBox x:Name="Atr2" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="42" hc:InfoElement.Placeholder="{DynamicResource Feature_plh}" hc:InfoElement.Title="{DynamicResource Feature2}" Height="72" BorderBrush="#7E8183" TextWrapping="Wrap" FontStretch="Expanded" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" AcceptsReturn="True" GotFocus="KB_GotFocus"/>
+                            <!--<hc:TextBox x:Name="Atr3" FontFamily="Verdana" FontSize="14" FontWeight="ExtraLight" hc:InfoElement.TitlePlacement="Top" hc:InfoElement.ContentHeight="40" hc:InfoElement.Placeholder="{DynamicResource Feature_plh}" hc:InfoElement.Title="{DynamicResource Feature3}" Height="72" BorderBrush="#7E8183" TextWrapping="Wrap" FontStretch="Expanded" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" GotFocus="KB_GotFocus"/>-->
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </hc:TabItem>
+            <!--<hc:TabItem Header="{DynamicResource Availability_Info}" PreviewMouseLeftButtonDown="TabItem3_MouseLeftButtonDown" ShowContextMenu="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="92*"/>
+                        <ColumnDefinition Width="601*"/>
+                    </Grid.ColumnDefinitions>
+                    <hc:SimplePanel Background="{DynamicResource App_Background}" Grid.ColumnSpan="2"/>
+                    <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="320" Height="442" Margin="10,10,0,0" Padding="10" BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2">
+                        <GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Some Info"/>
+                            </StackPanel>
+                        </GroupBox.Header>
+                        <StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox  mah:HeaderedControlHelper.HeaderBackground="{DynamicResource datagrid_headers}" Background="{DynamicResource App_Background}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="320" Height="250" Margin="270,10,0,0" Padding="10" BorderThickness="1" BorderBrush="Black" Grid.Column="1">
+                        <GroupBox.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Bold" Text="{DynamicResource Warehouse}"/>
+                            </StackPanel>
+                        </GroupBox.Header>
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource State}"/>
+                            <hc:TextBox x:Name="Stan" Height="40" GotFocus="KB_GotFocus" Margin="0,0,0,10"/>
+                            <TextBlock Text="{DynamicResource Reservation}"/>
+                            <hc:TextBox x:Name="Rezerwacja" Height="40" GotFocus="KB_GotFocus" Margin="0,0,0,10"/>
+                            <TextBlock Text="{DynamicResource Unit_Weight}"/>
+                            <hc:TextBox x:Name="WagaJednostkowa" Height="40" Tag="Only_Numbers" TextChanged="NKB_TextChanged" GotFocus="NKB_GotFocus"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </hc:TabItem>-->
+        </hc:TabControl>
+        <hc:StepBar x:Name="Step" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,-10">
+            <hc:StepBarItem PreviewMouseLeftButtonDown="TabItem1_MouseLeftButtonDown" Content="{DynamicResource Main_Info}" FontSize="12" FontWeight="ExtraLight"/>
+            <hc:StepBarItem PreviewMouseLeftButtonDown="TabItem2_MouseLeftButtonDown" Content="{DynamicResource Additional_Info}" FontSize="12" FontWeight="ExtraLight"/>
+        </hc:StepBar>
+        <Button Width="130" Click="Button_Click" Background="{DynamicResource Submit_button}" Content="{DynamicResource Submit}" Height="55" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5,0,0,-15" FontSize="15" FontWeight="SemiBold"/>
+        <Button Width="130" Click="Button_Click_1" IsCancel="True" Background="{DynamicResource Cancel_button}" Content="{DynamicResource Cancel}" Height="55" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,5,-15" FontSize="15" FontWeight="SemiBold"/>
+    </Grid>
+</local:MainWindow>

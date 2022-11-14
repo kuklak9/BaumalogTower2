@@ -1,0 +1,73 @@
+﻿<Window x:Class="ArticlesControl.Formatki.Add_OrderLine"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArticlesControl.Formatki"
+        mc:Ignorable="d"
+        Title="Add_OrderLine" Height="550" Width="695" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" VirtualizingPanel.IsVirtualizing="True">
+    <Grid Margin="0,58,0,10" x:Name="Grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <hc:TabControl x:Name="TabControl" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsAnimationEnabled="True" ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" Margin="0,-57,0,45" Grid.ColumnSpan="2">
+            <hc:TabItem HorizontalContentAlignment="Center" Header="{DynamicResource Main_Info}" ShowContextMenu="False">
+                <Grid>
+                    <hc:SimplePanel Background="{DynamicResource App_Background}" Height="508" VerticalAlignment="Top" Margin="-2,0,0,0" Width="695">
+                        <GroupBox x:Name="IndeksGroupbox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="426" Height="423" Margin="5,10,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="{DynamicResource Main_Info}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource Index}"/>
+                                <hc:ComboBox IsEnabled="True" x:Name="Indeks" Height="40" Width="275" HorizontalAlignment="Left" IsEditable="False"/>
+                                <TextBlock Text="{DynamicResource Quantity}"/>
+                                <hc:TextBox x:Name="Quantity"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Quantity_Approved}"/>
+                                <hc:TextBox x:Name="Quantity_Approved"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Status}"/>
+                                <hc:TextBox x:Name="Status"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Operation_Date}"/>
+                                <hc:DatePicker x:Name="Operation_Date"></hc:DatePicker>
+                                <TextBlock Text="{DynamicResource Description}"/>
+                                <hc:TextBox x:Name="Description" Height="120" AcceptsReturn="True" TextWrapping="Wrap" FontStretch="Expanded" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+                                <!--<hc:TextBox IsEnabled="True" x:Name="Indeks" Width="300" Height="46" ShowClearButton="True"/>-->
+                            </StackPanel>
+                        </GroupBox>
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="330" Height="165" Margin="10,295,0,0"/>
+                        <Button Click="Button_Click" Margin="314,60,277,415" Content="{DynamicResource Search}"/>
+                        <GroupBox Visibility="Visible" x:Name="Localization_Groupbox_Copy" HorizontalAlignment="Right" VerticalAlignment="Top" Width="241" Height="278" Margin="0,10,10,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="{DynamicResource Additional_Info}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource Operator}"/>
+                                <hc:TextBox x:Name="Operator"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Target_window}"/>
+                                <hc:TextBox x:Name="Target_window"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Target_operator}"/>
+                                <hc:TextBox x:Name="Target_operator"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Order_Number}"/>
+                                <hc:TextBox x:Name="Order_Number"></hc:TextBox>
+                                <TextBlock Text="{DynamicResource Position_Number}"/>
+                                <hc:TextBox x:Name="Position_Number"></hc:TextBox>
+                            </StackPanel>
+                        </GroupBox>
+                    </hc:SimplePanel>
+                </Grid>
+            </hc:TabItem>
+        </hc:TabControl>
+        <hc:StepBar x:Name="Step" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="239,436,0,0" Grid.Column="1" Height="56">
+            <hc:StepBarItem Content="{DynamicResource Main_Info}" FontSize="14" FontWeight="ExtraLight" Height="53"/>
+        </hc:StepBar>
+        <Button  Width="120" Background="{StaticResource Submit_button}" Content="{DynamicResource Submit}" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,-2" Grid.ColumnSpan="2" FontSize="15" FontWeight="SemiBold"/>
+        <Button Width="120" IsCancel="True" Background="{StaticResource Cancel_button}" Content="{DynamicResource Cancel}" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,-2" Grid.Column="1" FontSize="15" FontWeight="SemiBold"/>
+
+    </Grid>
+</Window>

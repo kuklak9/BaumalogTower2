@@ -1,0 +1,60 @@
+<ResourceDictionary 
+    xmlns ="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="ArticlesOnTrays">Art. na półkach</system:String>
+    <system:String x:Key="Species">Gatunek</system:String>
+    <system:String x:Key="Orders">Zlecenia</system:String>
+    <system:String x:Key="Trays">Półki</system:String>
+    <system:String x:Key="Storage_history">Historia</system:String>
+    <system:String x:Key="ShowArticleOnSelectedTray">Artykuły na półce</system:String>
+    <system:String x:Key="GetData">Pobierz</system:String>
+    <system:String x:Key="GiveData">Włóż</system:String>
+    <system:String x:Key="InventoryData">Inwentaryzacja</system:String>
+    <system:String x:Key="Weight">Waga</system:String>
+    <system:String x:Key="Article_Link_With_Location">Powiązanie</system:String>
+    <system:String x:Key="Quantity_Available">Aktualna ilość</system:String>
+    <system:String x:Key="Empty_Tray">Pusta półka</system:String>
+    <system:String x:Key="Get_All">Wszystko</system:String>
+    <system:String x:Key="Weight_Tara">WAGA</system:String>
+    <system:String x:Key="Find_Article">Wyszukaj artykuł</system:String>
+    <system:String x:Key="Hide_And_Save">Schowaj i przepisz</system:String>
+    <system:String x:Key="Tara">TARA</system:String>
+    <system:String x:Key="Weight_After_Tara">Waga po tarze</system:String>
+    <system:String x:Key="Weight_Converter">Przelicznik wagowy</system:String>
+    <system:String x:Key="EmptyFillTray_Empty">Pokaż puste półki</system:String>
+    <system:String x:Key="EmptyFillTray_All">Pokaż wszystkie</system:String>
+    <system:String x:Key="Converter_Weight">Przelicznik wagi</system:String>
+    <system:String x:Key="Actual_Weight">Aktualna waga</system:String>
+    <system:String x:Key="Actual_Cal_Count">Aktualna przekalkulowana ilość</system:String>
+    <system:String x:Key="Save_Count">Przepisz</system:String>
+    <system:String x:Key="TraysSelection">Wybór półki</system:String>
+    <system:String x:Key="StartAutomatic">Uruchuom automatycznie</system:String>
+    <system:String x:Key="StartManual">Uruchuom ręcznie</system:String>
+    <system:String x:Key="Orders_Info">Realizacja zlecenia</system:String>
+    <system:String x:Key="OrderLine">Linia zlecenia</system:String>
+    <system:String x:Key="OrderLineAll">Wsystkie linie wybranego zlecenia</system:String>
+    <system:String x:Key="OrderLine_PositionNumber">Numer pozycji</system:String>
+    <system:String x:Key="OrderLine_Indeks">Indeks</system:String>
+    <system:String x:Key="OrderLine_Qty">Ilość</system:String>
+    <system:String x:Key="OrderLine_QtyConfirmed">Ilość zatwierdzona</system:String>
+    <system:String x:Key="Tray_Quantity">Ilość na półce</system:String>
+    <system:String x:Key="Confirm">Zatwierdź</system:String>
+    <system:String x:Key="Location_Quantity">Ilość w lokalizacji</system:String>
+    <system:String x:Key="Bring_Tray">Przywieź</system:String>
+    <system:String x:Key="Tray_Selection_Give">Wybór półki dla wkładanego artykułu</system:String>
+    <system:String x:Key="Trays_Contains_Indeks">Półki posiadające wybrany artykuł</system:String>
+    <system:String x:Key="Find_Tray_From_Window">Wybierz półkę z okna</system:String>
+    <system:String x:Key="Find_ID_Tray">Wybrana półka</system:String>
+    <system:String x:Key="Find_Empty_Tray">Znajdź pustą półkę</system:String>
+    <system:String x:Key="Give_Info">Wkładanie artykułu na półkę</system:String>
+    <system:String x:Key="Tray_Selection_Get">Wybór półki dla pobieranego artykułu</system:String>
+    <system:String x:Key="Get_Info">Pobieranie artykułu z półki</system:String>
+    <system:String x:Key="Inventory_Info">Inwentaryzacja półki</system:String>
+    <Style x:Key="ButtonStyle" TargetType="Button">
+    </Style>
+    <Style x:Key="WindowFont" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+</ResourceDictionary> 

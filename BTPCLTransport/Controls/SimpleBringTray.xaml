@@ -1,0 +1,18 @@
+﻿<local:MainPanel x:Class="BTPCLTransport.Controls.SimpleBringTray"
+              xmlns:hc="https://handyorg.github.io/handycontrol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BTPControlLibrary;assembly=BTPControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="150">
+    <Grid>
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Label Content="{DynamicResource transportLabelContent}" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+            <hc:TextBox x:Name="weightValueTextBox" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="{DynamicResource BorderBrushTextBox}" FontSize="25" Margin="0,0,0,10"/>
+            <Button x:Name="bringTrayButton" Content="{DynamicResource bringTrayButtonContent}" Height="50" />
+        </StackPanel>
+        <hc:TextBox x:Name="serviceModeTextBox" Background="Red" BorderBrush="Black" Text="{DynamicResource serviceModeTextBoxText}" HorizontalContentAlignment="Center" FontSize="20" TextWrapping="Wrap" IsEnabled="True" IsReadOnly="True" Focusable="False" Visibility="Visible"/>
+    </Grid>
+</local:MainPanel>

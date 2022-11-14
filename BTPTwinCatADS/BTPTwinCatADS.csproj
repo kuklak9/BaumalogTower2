@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BTPConfig\BTPConfig.csproj" />
+    <ProjectReference Include="..\BTPLogs\BTPLogs.csproj" />
+    <ProjectReference Include="..\BTPUtilities\BTPUtilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TwinCAT.Ads">
+      <HintPath>..\..\Aplikacja Panel\BTPTwinCatADS\lib\TwinCAT.Ads.dll</HintPath>
+      <Aliases>global</Aliases>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

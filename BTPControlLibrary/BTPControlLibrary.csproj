@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.3.0" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BTPCLInput\BTPCLInput.csproj" />
+    <ProjectReference Include="..\BTPLogin\BTPLogin.csproj" />
+    <ProjectReference Include="..\BTPLogs\BTPLogs.csproj" />
+    <ProjectReference Include="..\BTPTranslation\BTPTranslation.csproj" />
+    <ProjectReference Include="..\BTPTwinCatADS\BTPTwinCatADS.csproj" />
+    <ProjectReference Include="..\BTPUtilities\BTPUtilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WindowsFormsIntegration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\WindowsFormsIntegration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

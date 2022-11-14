@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Add.png" />
+    <None Remove="Resources\all_tray.png" />
+    <None Remove="Resources\automatic.png" />
+    <None Remove="Resources\Delete.png" />
+    <None Remove="Resources\Del_filters.png" />
+    <None Remove="Resources\Edit.png" />
+    <None Remove="Resources\empty_tray.png" />
+    <None Remove="Resources\Excel.png" />
+    <None Remove="Resources\Eye.png" />
+    <None Remove="Resources\Filter.png" />
+    <None Remove="Resources\gear.png" />
+    <None Remove="Resources\Get.png" />
+    <None Remove="Resources\get2.png" />
+    <None Remove="Resources\Give.png" />
+    <None Remove="Resources\give2.png" />
+    <None Remove="Resources\inventory.png" />
+    <None Remove="Resources\Invisible.png" />
+    <None Remove="Resources\load-cargo.png" />
+    <None Remove="Resources\manual.png" />
+    <None Remove="Resources\Opt1.png" />
+    <None Remove="Resources\Opt2.png" />
+    <None Remove="Resources\Print.png" />
+    <None Remove="Resources\Refresh.png" />
+    <None Remove="Resources\Select_All.png" />
+    <None Remove="Resources\show_article.png" />
+    <None Remove="Resources\start.png" />
+    <None Remove="Resources\unload-cargo.png" />
+    <None Remove="Resources\Visible.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\all_tray.png" />
+    <Resource Include="Resources\automatic.png" />
+    <Resource Include="Resources\empty_tray.png" />
+    <Resource Include="Resources\gear.png" />
+    <Resource Include="Resources\inventory.png" />
+    <Resource Include="Resources\load-cargo.png" />
+    <Resource Include="Resources\manual.png" />
+    <Resource Include="Resources\Select_All.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Give.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="HandyControl" Version="3.3.0" />
+    <PackageReference Include="HandyControl.Lang.en" Version="3.3.0" />
+    <PackageReference Include="HandyControl.Lang.pl" Version="3.3.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BTPControlLibrary\BTPControlLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Add.png" />
+    <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Del_filters.png" />
+    <Resource Include="Resources\Edit.png" />
+    <Resource Include="Resources\Excel.png" />
+    <Resource Include="Resources\Eye.png" />
+    <Resource Include="Resources\Filter.png" />
+    <Resource Include="Resources\Get.png" />
+    <Resource Include="Resources\Invisible.png" />
+    <Resource Include="Resources\Opt1.png" />
+    <Resource Include="Resources\Opt2.png" />
+    <Resource Include="Resources\Print.png" />
+    <Resource Include="Resources\Refresh.png" />
+    <Resource Include="Resources\start.png" />
+    <Resource Include="Resources\unload-cargo.png" />
+    <Resource Include="Resources\Visible.png" />
+  </ItemGroup>
+
+</Project>

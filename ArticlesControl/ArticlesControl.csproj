@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Add_Data.cs" />
+    <Compile Remove="Add_Data.Designer.cs" />
+    <Compile Remove="Classes\Operator.cs" />
+    <Compile Remove="Classes\RFIDReader.cs" />
+    <Compile Remove="Popups\Add_Category.xaml.cs" />
+    <Compile Remove="Popups\Add_Operator.xaml.cs" />
+    <Compile Remove="Popups\Add_Order.xaml.cs" />
+    <Compile Remove="Popups\Add_OrderLine.xaml.cs" />
+    <Compile Remove="Popups\Add_Stock.xaml.cs" />
+    <Compile Remove="Popups\Add_Tray.xaml.cs" />
+    <Compile Remove="Popups\Localization_Selection_Inventory.xaml.cs" />
+    <Compile Remove="Classes\Category.cs" />
+    <Compile Remove="Classes\Order.cs" />
+    <Compile Remove="Classes\OrderLine.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Add_Data.xsc" />
+    <None Remove="Add_Data.xsd" />
+    <None Remove="Add_Data.xss" />
+    <None Remove="Resources\Articles.png" />
+    <None Remove="Resources\ArticlesOnTrays.png" />
+    <None Remove="Resources\Order.png" />
+    <None Remove="Resources\shutdown.png" />
+    <None Remove="Resources\Trays.png" />
+    <None Remove="Resources\Type.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Popups\Add_Category.xaml" />
+    <Page Remove="Popups\Add_Operator.xaml" />
+    <Page Remove="Popups\Add_Order.xaml" />
+    <Page Remove="Popups\Add_OrderLine.xaml" />
+    <Page Remove="Popups\Add_Stock.xaml" />
+    <Page Remove="Popups\Add_Tray.xaml" />
+    <Page Remove="Popups\Localization_Selection_Inventory.xaml" />
+    <Page Remove="ResourcesForControl.xaml" />
+    <Page Remove="StringResources.en-EN.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="6.0.0" />
+    <PackageReference Include="System.Management" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BaumalogTowerPanel_2\BTPControlLibrary\BTPControlLibrary.csproj" />
+    <ProjectReference Include="..\BTPDataBase\BTPDataBase.csproj" />
+    <ProjectReference Include="..\DataGridControl\DataGridControl.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Articles.png" />
+    <Resource Include="Resources\ArticlesOnTrays.png" />
+    <Resource Include="Resources\Order.png" />
+    <Resource Include="Resources\shutdown.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Trays.png" />
+    <Resource Include="Resources\Type.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Popups\Orders_Run.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Popups\Inventory.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Popups\Tray_Selection_Get.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Popups\Tray_Selection_Give.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Popups\Give_A_AnP.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Popups\Get_A_AnP.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+</Project>

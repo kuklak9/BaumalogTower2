@@ -1,0 +1,64 @@
+﻿<local:MainWindow x:Class="BAUMALOG_APP.Add_Tray" xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArticlesControl.Formatki" mc:Ignorable="d"
+        Title="Add Tray" Height="550" Width="600" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" VirtualizingPanel.IsVirtualizing="True">
+    <Grid Margin="0,58,0,10" x:Name="Grid">
+        <hc:TabControl x:Name="TabControl" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsAnimationEnabled="True" ShowCloseButton="False" IsDraggable="False" IsTabFillEnabled="True" ShowContextMenu="False" Margin="0,-57,0,45">
+            <hc:TabItem HorizontalContentAlignment="Center" Header="{DynamicResource Main_Info}" ShowContextMenu="False">
+                <Grid>
+                    <hc:SimplePanel Background="{DynamicResource App_Background}" Height="525" VerticalAlignment="Top" Margin="0,0,0,0" Width="695">
+                        <GroupBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Height="165" Margin="10,15,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="Grupa pierwsza"></TextBlock>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource ID_Tray}"/>
+                                <hc:TextBox IsEnabled="True" Tag="Only_Numbers"  x:Name="TrayNumber" Height="36" />
+                                <TextBlock Text="{DynamicResource Rack}"/>
+                                <hc:ComboBox IsEnabled="True" x:Name="Rack" Height="36" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Height="265" Margin="10,185,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="{DynamicResource Main_Info}"></TextBlock>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel>
+                                <TextBlock Text="{DynamicResource Type}"/>
+                                <hc:ComboBox x:Name="Type" Height="36"></hc:ComboBox>
+                                <TextBlock Text="{DynamicResource Assignment}"/>
+                                <hc:ComboBox x:Name="Assignment" Height="36"></hc:ComboBox>
+                                <TextBlock Text="{DynamicResource Status}"/>
+                                <hc:ComboBox x:Name="status" Height="36"></hc:ComboBox>
+                                <TextBlock Text="{DynamicResource Category}"/>
+                                <hc:TextBox x:Name="Category" IsEnabled="False" Height="36"></hc:TextBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Height="435" Margin="305,15,0,0" Padding="10" BorderThickness="1" BorderBrush="Black">
+                            <GroupBox.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold" Text="{DynamicResource Category}"/>
+                                </StackPanel>
+                            </GroupBox.Header>
+                            <StackPanel x:Name="Tree">
+                                <TreeView Height="200" x:Name="Category_Tree" Background="{DynamicResource App_Background}" Visibility="Visible" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+                                </TreeView>
+                            </StackPanel>
+                        </GroupBox>
+                    </hc:SimplePanel>
+                </Grid>
+            </hc:TabItem>
+        </hc:TabControl>
+        <hc:StepBar x:Name="Step" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,-2">
+            <hc:StepBarItem Content="{DynamicResource Main_Info}" FontSize="13" FontWeight="ExtraLight"/>
+        </hc:StepBar>
+        <Button Width="120" Background="{StaticResource Submit_button}" Content="{DynamicResource Submit}" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,-2" FontSize="15" FontWeight="SemiBold"/>
+        <Button Width="120" IsCancel="True" Background="{StaticResource Cancel_button}" Content="{DynamicResource Cancel}" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,-2" FontSize="15" FontWeight="SemiBold"/>
+    </Grid>
+</local:MainWindow>

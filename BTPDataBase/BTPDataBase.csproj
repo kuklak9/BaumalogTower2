@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BTPUtilities\BTPUtilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Add_Data.Designer.cs">
+      <DependentUpon>Add_Data.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="DS_ArticlcesTransactions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DS_ArticlcesTransactions.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DS_Articles.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DS_Articles.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DS_Logs.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DS_Logs.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DS_Operators.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DS_Operators.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DS_Trays.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DS_Trays.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="ZleceniaDS.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ZleceniaDS.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Add_Data.xsd">
+      <LastGenOutput>Add_Data.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DS_ArticlcesTransactions.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ArticlcesTransactions.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DS_Articles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Articles.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DS_Logs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Logs.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DS_Operators.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Operators.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DS_Trays.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Trays.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="ZleceniaDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ZleceniaDS.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
